@@ -15,6 +15,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   await displayPopularMovies();
 });
 
+function loadMovieLists() {
+  const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+  const watchList = JSON.parse(localStorage.getItem('watchList')) || [];
+
+  displayMovies(favorites, 'Favorites', 'favorites');
+  displayMovies(watchList, 'Watch List', 'watchList');
+}
+
 async function displayPopularMovies() {
   try {
     const response = await fetch(`${TOP_MOVIES_URL}?api_key=${API_KEY}`);
