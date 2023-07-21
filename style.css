@@ -94,7 +94,7 @@ display: none;
   gap: 1rem;
 }
 
-.movie-card-container img {
+.movie-cards-container img {
   height: 300px;
   width: auto;
   /*float: left;*/
