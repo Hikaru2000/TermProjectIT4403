@@ -19,6 +19,75 @@ main {
   padding: 2rem;
 }
 
+/* Navigation */
+.topnav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav li {
+  float: left;
+}
+
+.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topvan li a:hover {
+  background-color: #111;
+}
+
+.dropbtn {
+  background-color: #333;
+  color: white;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  backgroun-color: #111
+}
+
+.dropdown:hover, .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover, .dropbtn {
+  background-color: 222;
+}
+
+
+
 #movieList {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
