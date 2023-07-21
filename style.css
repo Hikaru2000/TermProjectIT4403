@@ -24,3 +24,9 @@ main {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
 }
+
+.movie-card-container img {
+  height: 300px;
+  width: auto;
+  /*float: left;*/
+}
