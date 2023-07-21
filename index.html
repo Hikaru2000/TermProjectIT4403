@@ -7,8 +7,28 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Top Header - Navigation and Search Bar -->
   <header>
-    <h1>Movie SPA</h1>
+
+    <!-- Navigation Bar -->
+    <div class="topnav">
+      <ul>
+        <li><a href="index.html"> Movie Search </a></li>
+        <div class="dropdown">
+          <button class="dropbtn"> Lists </button>
+          <div class="dropdown-content">
+            <li><a href="favorite-list.html"> Favorite List </a></li>
+            <li><a href="watch-list.html"> Watch List </a></li>
+          </div>
+        </div>
+      </ul>
+    </div>
+    
+    <!-- Title Header -->
+    <h1> Movie Search </h1>
+
+    <!-- Search Bar and button -->
     <input type="text" id="searchInput" placeholder="Search movies...">
     <button id="searchBtn">Search</button>
   </header>
