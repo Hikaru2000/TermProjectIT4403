@@ -30,6 +30,7 @@ main {
 
 .topnav li {
   float: left;
+  list-style-type: none;
 }
 
 .topnav li a, .dropbtn {
