@@ -20,7 +20,7 @@ main {
 }
 
 /* Navigation */
-.topnav ul, .dropbtn {
+.topnav ul, .dropdown {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -44,14 +44,14 @@ main {
   background-color: #111;
 }
 
-/*.dropbtn {
+.dropbtn {
   background-color: #333;
   color: white;
   margin: 0;
   padding: 0;
   border: none;
   cursor: pointer;
-} */
+}
 
 .dropdown {
   position: relative;
