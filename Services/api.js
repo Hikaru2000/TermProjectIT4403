@@ -25,4 +25,19 @@ export const searchMovies = async (query) => {
   return response.data.results;
 };
 
+export const getMovieDetails = async (movieId) => {
+  const response = await api.get(`/movie/${movieId}`);
+  return response.data;
+};
+
+export const getMovieCredits = async (movieId) => {
+  const response = await api.get(`/movie/${movieId}/credits`);
+  return response.data;
+};
+
+export const getPersonDetails = async (personId) => {
+  const response = await api.get(`/person/${personId}`);
+  return response.data;
+};
+
 // Add more API functions based on your needs
