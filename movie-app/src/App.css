@@ -1,3 +1,17 @@
+/*Organization*/
+src/
+  |- components/
+  |  |- Home.js
+  |  |- Search.js
+  |  |- MovieDetail.js
+  |  |- PersonDetail.js
+  |  |- Favorites.js
+  |  |- Watchlist.js
+  |- services/
+  |  |- api.js
+  |- App.js
+  |- index.js
+
 .App {
   text-align: center;
 }
