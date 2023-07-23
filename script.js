@@ -133,6 +133,7 @@ resultsContainer.addEventListener('click', (event) => {
 });
 
 function showDetailedInfo(id) {
+  console.log('Movie/TV Show ID:', id);
   const detailsUrl = `${apiUrl}/movie/${id}?api_key=${apiKey}&append_to_response=credits,reviews`;
 
   fetch(detailsUrl)
