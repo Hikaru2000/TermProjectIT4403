@@ -12,7 +12,7 @@ header {
 }
 
 header h1 {
-  margin: 0;
+  margin: 10ox;
 }
 
 main {
@@ -21,7 +21,7 @@ main {
 
 /* Navigation */
 .topnav {
-
+  padding-bottom: 10px;
 }
 
 .topnav ul {
