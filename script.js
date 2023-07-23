@@ -126,9 +126,11 @@ function createPaginationButton(text, page) {
 // Add event listener to show detailed info when clicking on a movie/TV show
 resultsContainer.addEventListener('click', (event) => {
   const movieItem = event.target.closest('.movie-item');
+  console.log('movieItem:', movieItem);
+  console.log('movieItem.dataset:', movieItem.dataset);
+  
   if (movieItem) {
     const id = movieItem.dataset.id;
-    console.log('Clicked Movie/TV Show ID:', id);
     showDetailedInfo(id);
   }
 });
