@@ -128,6 +128,7 @@ resultsContainer.addEventListener('click', (event) => {
   const movieItem = event.target.closest('.movie-item');
   if (movieItem) {
     const id = movieItem.dataset.id;
+    console.log('Clicked Movie/TV Show ID:', id);
     showDetailedInfo(id);
   }
 });
