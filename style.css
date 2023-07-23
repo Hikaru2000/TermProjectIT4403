@@ -1,4 +1,17 @@
-body {
+src/
+  |- components/
+  |  |- Home.js
+  |  |- Search.js
+  |  |- MovieDetail.js
+  |  |- PersonDetail.js
+  |  |- Favorites.js
+  |  |- Watchlist.js
+  |- services/
+  |  |- api.js
+  |- App.js
+  |- index.js
+
+/*body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -17,10 +30,10 @@ header h1 {
 
 main {
   padding: 2rem;
-}
+} */
 
 /* Navigation */
-.topnav {
+/*.topnav {
   padding-bottom: 10px;
 }
 
@@ -59,7 +72,7 @@ main {
   float: left;
 }*/
 
-li.dropdown {
+/*li.dropdown {
   display: inline-block;
 }
 
@@ -90,7 +103,7 @@ li.dropdown {
 /* End Top navigation */
 
 
-#movieList {
+/*#movieList {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
