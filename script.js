@@ -55,10 +55,18 @@ function showResults(results) {
   results.forEach(result => {
     const item = document.createElement('div');
     item.classList.add('movie-item');
-    item.innerHTML = `<h3>${result.title || result.name}</h3>
+
+    const imageUrl = result.poster_path
+      ? `https://image.tmdb.org/t/p/w200${result.poster_path}`
+      : 'placeholder.jpg'; // Replace with a placeholder image URL or leave blank
+
+    item.innerHTML = `<img src="${imageUrl}" alt="${result.title || result.name}" />
+                      <h3>${result.title || result.name}</h3>
                       <p>Release Date: ${result.release_date || result.first_air_date}</p>
                       <p>${result.overview}</p>`;
 
     resultsContainer.appendChild(item);
   });
+}
+
 }
