@@ -78,6 +78,7 @@ function showResults(results, totalPages) {
   results.forEach(result => {
     const item = document.createElement('div');
     item.classList.add('movie-item');
+    item.classList.add('data-id');
 
     const imageUrl = result.poster_path
       ? `https://image.tmdb.org/t/p/w200${result.poster_path}`
@@ -130,7 +131,8 @@ resultsContainer.addEventListener('click', (event) => {
   console.log('movieItem.dataset:', movieItem.dataset);
   
   if (movieItem) {
-    const id = movieItem.dataset.id;
+    const id = movieItem.getAttribute('data-id');
+    console.log('Clicked Movie/TV Show ID:', id);
     showDetailedInfo(id);
   }
 });
