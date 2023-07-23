@@ -20,10 +20,14 @@ main {
 }
 
 /* Navigation */
+.topnav {
+
+}
+
 .topnav ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding-bottom: 10px;
   overflow: hidden;
   background-color: #333;
 }
