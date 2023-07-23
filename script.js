@@ -69,5 +69,3 @@ function showResults(results) {
   });
 }
 
-
-}
