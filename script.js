@@ -78,7 +78,7 @@ function showResults(results, totalPages) {
   results.forEach(result => {
     const item = document.createElement('div');
     item.classList.add('movie-item');
-    item.setAttribute('data-id', ${result.id});
+    item.setAttribute('data-id', result.id);
 
     const imageUrl = result.poster_path
       ? `https://image.tmdb.org/t/p/w200${result.poster_path}`
