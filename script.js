@@ -10,6 +10,7 @@ let currentPage = 1;
 let currentSearchTerm = '';
 let currentMethod = 'search';
 
+// Define variables
 const searchInput = document.getElementById('searchInput');
 const searchBtn = document.getElementById('searchBtn');
 const searchMethodBtn = document.getElementById('searchMethod');
@@ -71,7 +72,7 @@ function discoverMoviesAndShows(page) {
     });
 }
 
-//Displays results and constructs card
+//Displays results and fills grid
 function showResults(results, totalPages) {
   resultsContainer.innerHTML = '';
 
@@ -151,6 +152,7 @@ function showDetailedInfo(id) {
     });
 }
 
+// Creates the pop-up to show detail information
 function showDetailedModal(movieData) {
   // Create a modal to display detailed information
   const modal = document.createElement('div');
@@ -176,7 +178,7 @@ function showDetailedModal(movieData) {
 
   document.body.appendChild(modal);
 
-  // Close the modal when clicking on the close button
+  // Button to close the modal
   const closeBtn = modal.querySelector('.close-btn');
   closeBtn.addEventListener('click', () => {
     document.body.removeChild(modal);
@@ -192,6 +194,7 @@ function showDetailedModal(movieData) {
   });
 }
 
+// Print list of Cast members in modal
 function getCastList(cast) {
   return cast
     .slice(0, 5) // Display the first 5 cast members
@@ -199,6 +202,7 @@ function getCastList(cast) {
     .join('');
 }
 
+// Print List of reviews in Modal
 function getReviewsList(reviews) {
   return reviews
     .slice(0, 5) // Display the first 5 reviews
@@ -207,20 +211,7 @@ function getReviewsList(reviews) {
 }
 
 
-//Show Cast Details
-
-// Add event listener to show detailed info when clicking on a cast member
-/*function handleCastMemberClick(event) {
-  const castMember = event.target.closest('.cast-member');
-  if (castMember) {
-    const personId = castMember.dataset.personId;
-    showPersonDetails(personId);
-    console.log('Person ID:', personId);
-  }
-}
-
-modal-content.addEventListener('click', handleCastMemberClick);*/
-
+// Show Actor/Acress details
 function showPersonDetails(personId) {
   const personDetailsUrl = `${apiUrl}/person/${personId}?api_key=${apiKey}`;
 
@@ -234,6 +225,7 @@ function showPersonDetails(personId) {
     });
 }
 
+// Deploy modal with actor/acress details
 function showPersonDetailsModal(personData) {
   // Create a modal to display detailed information about the person
   const modal = document.createElement('div');
@@ -251,7 +243,7 @@ function showPersonDetailsModal(personData) {
 
   document.body.appendChild(modal);
 
-  // Close the modal when clicking on the close button
+  // Close the Acotr details modal
   const closeBtn = modal.querySelector('.close-btn');
   closeBtn.addEventListener('click', () => {
     document.body.removeChild(modal);
