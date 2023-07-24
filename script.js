@@ -210,7 +210,7 @@ function handleCastMemberClick(event) {
   }
 }
 
-resultsContainer.addEventListener('click', handleCastMemberClick);
+modal-content.addEventListener('click', handleCastMemberClick);
 
 function showPersonDetails(personId) {
   const personDetailsUrl = `${apiUrl}/person/${personId}?api_key=${apiKey}`;
