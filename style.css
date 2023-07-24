@@ -86,3 +86,14 @@ button {
   margin-bottom: 5px;
 }
 
+/* Adjust modal styles for better positioning */
+.modal-content {
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    max-height: 90%;
+  }
+}
