@@ -201,7 +201,7 @@ function getReviewsList(reviews) {
 //Show Cast Details
 
 // Add event listener to show detailed info when clicking on a cast member
-document.addEventListener('click', (event) => {
+resultsContainer.addEventListener('click', (event) => {
   const castMember = event.target.closest('.cast-member');
   if (castMember) {
     const personId = castMember.dataset.personId;
