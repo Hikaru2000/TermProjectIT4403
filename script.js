@@ -196,3 +196,52 @@ function getReviewsList(reviews) {
     .map(review => `<li>${review.author}: ${review.content}</li>`)
     .join('');
 }
+
+
+//Show Cast Details
+
+// Add event listener to show detailed info when clicking on a cast member
+document.addEventListener('click', (event) => {
+  const castMember = event.target.closest('.cast-member');
+  if (castMember) {
+    const personId = castMember.dataset.personId;
+    showPersonDetails(personId);
+  }
+});
+
+function showPersonDetails(personId) {
+  const personDetailsUrl = `${apiUrl}/person/${personId}?api_key=${apiKey}`;
+
+  fetch(personDetailsUrl)
+    .then(response => response.json())
+    .then(data => {
+      showPersonDetailsModal(data);
+    })
+    .catch(error => {
+      console.error('Error fetching person details:', error);
+    });
+}
+
+function showPersonDetailsModal(personData) {
+  // Create a modal to display detailed information about the person
+  const modal = document.createElement('div');
+  modal.classList.add('modal');
+  modal.innerHTML = `
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>${personData.name}</h2>
+      <p>Gender: ${personData.gender === 1 ? 'Female' : 'Male'}</p>
+      <p>Birthday: ${personData.birthday || 'N/A'}</p>
+      <p>Place of Birth: ${personData.place_of_birth || 'N/A'}</p>
+      <p>Biography: ${personData.biography || 'N/A'}</p>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  // Close the modal when clicking on the close button
+  const closeBtn = modal.querySelector('.close-btn');
+  closeBtn.addEventListener('click', () => {
+    document.body.removeChild(modal);
+  });
+}
