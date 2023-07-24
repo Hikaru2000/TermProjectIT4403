@@ -73,6 +73,10 @@ button {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+.modal-content p {
+  margin-bottom: 10px;
+}
+
 .close-btn {
   position: absolute;
   top: 10px;
