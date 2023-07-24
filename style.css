@@ -10,7 +10,7 @@ body {
   margin: 50px auto;
   padding: 20px;
   border: 25px solid #cc9900;
-  background-color: #ffffff;
+  background-color: #000000;
   border-radius: 15px;
 }
 
@@ -33,7 +33,7 @@ input[type="text"] {
 
 button {
   padding: 5px 10px;
-  background-color: #ffc629;
+  /*background-color: #ffc629;*/
   border-radius: 4px;
 }
 
