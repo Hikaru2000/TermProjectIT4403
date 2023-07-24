@@ -245,3 +245,4 @@ function showPersonDetailsModal(personData) {
     document.body.removeChild(modal);
   });
 }
+
