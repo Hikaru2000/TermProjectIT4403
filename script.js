@@ -181,6 +181,15 @@ function showDetailedModal(movieData) {
   closeBtn.addEventListener('click', () => {
     document.body.removeChild(modal);
   });
+
+  // Add event listener to show detailed info when clicking on a cast member's name
+  modal.querySelector('.cast-list').addEventListener('click', (event) => {
+    const castMember = event.target.closest('.cast-member');
+    if (castMember) {
+      const personId = castMember.dataset.personId;
+      showPersonDetails(personId);
+    }
+  });
 }
 
 function getCastList(cast) {
@@ -201,7 +210,7 @@ function getReviewsList(reviews) {
 //Show Cast Details
 
 // Add event listener to show detailed info when clicking on a cast member
-function handleCastMemberClick(event) {
+/*function handleCastMemberClick(event) {
   const castMember = event.target.closest('.cast-member');
   if (castMember) {
     const personId = castMember.dataset.personId;
@@ -210,7 +219,7 @@ function handleCastMemberClick(event) {
   }
 }
 
-modal-content.addEventListener('click', handleCastMemberClick);
+modal-content.addEventListener('click', handleCastMemberClick);*/
 
 function showPersonDetails(personId) {
   const personDetailsUrl = `${apiUrl}/person/${personId}?api_key=${apiKey}`;
