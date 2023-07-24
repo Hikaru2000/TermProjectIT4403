@@ -83,6 +83,7 @@ button {
   right: 10px;
   font-size: 24px;
   cursor: pointer;
+  color: red;
 }
 
 .cast-list li,
