@@ -186,7 +186,7 @@ function showDetailedModal(movieData) {
 function getCastList(cast) {
   return cast
     .slice(0, 5) // Display the first 5 cast members
-    .map(member => `<li>${member.name} as ${member.character}</li>`)
+    .map(member => `<li class="cast-member" data-person-id="${cast.id}">${member.name} as ${member.character}</li>`)
     .join('');
 }
 
